@@ -21,6 +21,11 @@ class ListsController < ApplicationController
       render :new
     end
 
+    def destroy
+      List.destroy
+      redirect_to lists_path
+    end
+
   end
 
   private
