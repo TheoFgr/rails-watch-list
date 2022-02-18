@@ -1,0 +1,11 @@
+<h1>Index List</h1>
+
+<ul style= 'list-style: none;'>
+  <% @lists.each do |list| %>
+  <li>
+    <%= link_to list.name, list_path(list), style: 'color: white; background-color: black; box-shadow: 3px 3px 3px grey' %>
+  </li>
+  <% end %>
+</ul>
+
+<%= link_to '+Create New List', new_list_path, class: 'btn btn-secondary' %>
